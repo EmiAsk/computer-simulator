@@ -6,204 +6,12 @@ source: |-
 input: |-
   foo
 code: |-
-  60000100
+  50000040
   00000000
   00000001
   00000054
   00000001
   00000046
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
-  00000000
   00000000
   00000000
   00000000
@@ -269,18 +77,10 @@ code: |-
   00800001
   01800000
   30800801
-  68000000
-  5000010f
-  00000001
-  08400002
-  00000054
-  08400003
+  88000000
+  6000004b
   00000002
-  60000114
-  00000001
-  08400004
-  00000046
-  08400005
+  5000004c
   00000004
   70000000
   08400001
@@ -291,34 +91,32 @@ code: |-
   00800000
   01800001
   30800801
-  58000129
+  68000061
   00800002
   01800000
   10800801
   10800001
   08400001
   00600001
-  90000001
+  80000001
   00800000
   10800001
   08800000
-  6000011a
+  50000052
   00800002
-  68000000
-  68000000
-  68000000
+  88000000
+  88000000
+  88000000
   98000000
 
 output: |
-  T 2 1
-  F 4 1
-  source LoC: 4 code instr: 47
+  source LoC: 4 code instr: 39
   ============================================================
   T
-  instructions_n: 46 ticks: 128
+  instructions_n: 42 ticks: 120
 
 disasm: |-
-  0 - 60000100 - JMP mem[0x100] - Skip static memory
+  0 - 50000040 - JMP mem[0x40] - Skip static memory
   1 - 00000000
   2 - 00000001
   3 - 00000054
@@ -382,372 +180,164 @@ disasm: |-
   3d - 00000000
   3e - 00000000
   3f - 00000000
-  40 - 00000000
-  41 - 00000000
-  42 - 00000000
-  43 - 00000000
-  44 - 00000000
-  45 - 00000000
-  46 - 00000000
-  47 - 00000000
-  48 - 00000000
-  49 - 00000000
-  4a - 00000000
-  4b - 00000000
-  4c - 00000000
-  4d - 00000000
-  4e - 00000000
-  4f - 00000000
-  50 - 00000000
-  51 - 00000000
-  52 - 00000000
-  53 - 00000000
-  54 - 00000000
-  55 - 00000000
-  56 - 00000000
-  57 - 00000000
-  58 - 00000000
-  59 - 00000000
-  5a - 00000000
-  5b - 00000000
-  5c - 00000000
-  5d - 00000000
-  5e - 00000000
-  5f - 00000000
-  60 - 00000000
-  61 - 00000000
-  62 - 00000000
-  63 - 00000000
-  64 - 00000000
-  65 - 00000000
-  66 - 00000000
-  67 - 00000000
-  68 - 00000000
-  69 - 00000000
-  6a - 00000000
-  6b - 00000000
-  6c - 00000000
-  6d - 00000000
-  6e - 00000000
-  6f - 00000000
-  70 - 00000000
-  71 - 00000000
-  72 - 00000000
-  73 - 00000000
-  74 - 00000000
-  75 - 00000000
-  76 - 00000000
-  77 - 00000000
-  78 - 00000000
-  79 - 00000000
-  7a - 00000000
-  7b - 00000000
-  7c - 00000000
-  7d - 00000000
-  7e - 00000000
-  7f - 00000000
-  80 - 00000000
-  81 - 00000000
-  82 - 00000000
-  83 - 00000000
-  84 - 00000000
-  85 - 00000000
-  86 - 00000000
-  87 - 00000000
-  88 - 00000000
-  89 - 00000000
-  8a - 00000000
-  8b - 00000000
-  8c - 00000000
-  8d - 00000000
-  8e - 00000000
-  8f - 00000000
-  90 - 00000000
-  91 - 00000000
-  92 - 00000000
-  93 - 00000000
-  94 - 00000000
-  95 - 00000000
-  96 - 00000000
-  97 - 00000000
-  98 - 00000000
-  99 - 00000000
-  9a - 00000000
-  9b - 00000000
-  9c - 00000000
-  9d - 00000000
-  9e - 00000000
-  9f - 00000000
-  a0 - 00000000
-  a1 - 00000000
-  a2 - 00000000
-  a3 - 00000000
-  a4 - 00000000
-  a5 - 00000000
-  a6 - 00000000
-  a7 - 00000000
-  a8 - 00000000
-  a9 - 00000000
-  aa - 00000000
-  ab - 00000000
-  ac - 00000000
-  ad - 00000000
-  ae - 00000000
-  af - 00000000
-  b0 - 00000000
-  b1 - 00000000
-  b2 - 00000000
-  b3 - 00000000
-  b4 - 00000000
-  b5 - 00000000
-  b6 - 00000000
-  b7 - 00000000
-  b8 - 00000000
-  b9 - 00000000
-  ba - 00000000
-  bb - 00000000
-  bc - 00000000
-  bd - 00000000
-  be - 00000000
-  bf - 00000000
-  c0 - 00000000
-  c1 - 00000000
-  c2 - 00000000
-  c3 - 00000000
-  c4 - 00000000
-  c5 - 00000000
-  c6 - 00000000
-  c7 - 00000000
-  c8 - 00000000
-  c9 - 00000000
-  ca - 00000000
-  cb - 00000000
-  cc - 00000000
-  cd - 00000000
-  ce - 00000000
-  cf - 00000000
-  d0 - 00000000
-  d1 - 00000000
-  d2 - 00000000
-  d3 - 00000000
-  d4 - 00000000
-  d5 - 00000000
-  d6 - 00000000
-  d7 - 00000000
-  d8 - 00000000
-  d9 - 00000000
-  da - 00000000
-  db - 00000000
-  dc - 00000000
-  dd - 00000000
-  de - 00000000
-  df - 00000000
-  e0 - 00000000
-  e1 - 00000000
-  e2 - 00000000
-  e3 - 00000000
-  e4 - 00000000
-  e5 - 00000000
-  e6 - 00000000
-  e7 - 00000000
-  e8 - 00000000
-  e9 - 00000000
-  ea - 00000000
-  eb - 00000000
-  ec - 00000000
-  ed - 00000000
-  ee - 00000000
-  ef - 00000000
-  f0 - 00000000
-  f1 - 00000000
-  f2 - 00000000
-  f3 - 00000000
-  f4 - 00000000
-  f5 - 00000000
-  f6 - 00000000
-  f7 - 00000000
-  f8 - 00000000
-  f9 - 00000000
-  fa - 00000000
-  fb - 00000000
-  fc - 00000000
-  fd - 00000000
-  fe - 00000000
-  ff - 00000000
-  100 - 00000001 - LD r0, 0x1
-  101 - 70000000 - PUSH r0 - Push var x
-  102 - 00000001 - LD r0, 0x1
-  103 - 70000000 - PUSH r0 - Push var #binop result
-  104 - 00800001 - LD r0, mem[SP + 0x1]
-  105 - 01800000 - LD r1, mem[SP + 0x0]
-  106 - 30800801 - EQ r0, r0, r1
-  107 - 68000000 - POP 
-  108 - 5000010f - JZ r0, mem[0x10f]
-  109 - 00000001 - LD r0, 0x1
-  10a - 08400002 - ST r0, mem[0x2]
-  10b - 00000054 - LD r0, 0x54
-  10c - 08400003 - ST r0, mem[0x3]
-  10d - 00000002 - LD r0, 0x2
-  10e - 60000114 - JMP mem[0x114]
-  10f - 00000001 - LD r0, 0x1
-  110 - 08400004 - ST r0, mem[0x4]
-  111 - 00000046 - LD r0, 0x46
-  112 - 08400005 - ST r0, mem[0x5]
-  113 - 00000004 - LD r0, 0x4
-  114 - 70000000 - PUSH r0 - Push var #str_p
-  115 - 08400001 - ST r0, mem[0x1]
-  116 - 00600001 - LD r0, mem[mem[0x1]] - Load string size inside print_str
-  117 - 70000000 - PUSH r0 - Push var #str_size
-  118 - 00000000 - LD r0, 0x0
-  119 - 70000000 - PUSH r0 - Push var #i
-  11a - 00800000 - LD r0, mem[SP + 0x0]
-  11b - 01800001 - LD r1, mem[SP + 0x1]
-  11c - 30800801 - EQ r0, r0, r1
-  11d - 58000129 - JNZ r0, mem[0x129]
-  11e - 00800002 - LD r0, mem[SP + 0x2]
-  11f - 01800000 - LD r1, mem[SP + 0x0]
-  120 - 10800801 - ADD r0, r0, r1
-  121 - 10800001 - ADD r0, r0, 0x1
-  122 - 08400001 - ST r0, mem[0x1]
-  123 - 00600001 - LD r0, mem[mem[0x1]] - Load char inside print_str
-  124 - 90000001 - OUT r0, port[0x1]
-  125 - 00800000 - LD r0, mem[SP + 0x0]
-  126 - 10800001 - ADD r0, r0, 0x1
-  127 - 08800000 - ST r0, mem[SP + 0x0]
-  128 - 6000011a - JMP mem[0x11a] - Jump to read str loop start
-  129 - 00800002 - LD r0, mem[SP + 0x2]
-  12a - 68000000 - POP  - Pop #i used to print string
-  12b - 68000000 - POP  - Pop #str_size used to print string
-  12c - 68000000 - POP  - Pop #str_p used to print string
-  12d - 98000000 - HLT 
+  40 - 00000001 - LD r0, 0x1
+  41 - 70000000 - PUSH r0 - Push var x
+  42 - 00000001 - LD r0, 0x1
+  43 - 70000000 - PUSH r0 - Push var #binop result
+  44 - 00800001 - LD r0, mem[SP + 0x1]
+  45 - 01800000 - LD r1, mem[SP + 0x0]
+  46 - 30800801 - EQ r0, r0, r1
+  47 - 88000000 - POP
+  48 - 6000004b - JZ r0, mem[0x4b]
+  49 - 00000002 - LD r0, 0x2
+  4a - 5000004c - JMP mem[0x4c]
+  4b - 00000004 - LD r0, 0x4
+  4c - 70000000 - PUSH r0 - Push var #str_p
+  4d - 08400001 - ST r0, mem[0x1]
+  4e - 00600001 - LD r0, mem[mem[0x1]] - Load string size inside print_str
+  4f - 70000000 - PUSH r0 - Push var #str_size
+  50 - 00000000 - LD r0, 0x0
+  51 - 70000000 - PUSH r0 - Push var #i
+  52 - 00800000 - LD r0, mem[SP + 0x0]
+  53 - 01800001 - LD r1, mem[SP + 0x1]
+  54 - 30800801 - EQ r0, r0, r1
+  55 - 68000061 - JNZ r0, mem[0x61]
+  56 - 00800002 - LD r0, mem[SP + 0x2]
+  57 - 01800000 - LD r1, mem[SP + 0x0]
+  58 - 10800801 - ADD r0, r0, r1
+  59 - 10800001 - ADD r0, r0, 0x1
+  5a - 08400001 - ST r0, mem[0x1]
+  5b - 00600001 - LD r0, mem[mem[0x1]] - Load char inside print_str
+  5c - 80000001 - OUT r0, port[0x1]
+  5d - 00800000 - LD r0, mem[SP + 0x0]
+  5e - 10800001 - ADD r0, r0, 0x1
+  5f - 08800000 - ST r0, mem[SP + 0x0]
+  60 - 50000052 - JMP mem[0x52] - Jump to read str loop start
+  61 - 00800002 - LD r0, mem[SP + 0x2]
+  62 - 88000000 - POP - Pop #i used to print string
+  63 - 88000000 - POP - Pop #str_size used to print string
+  64 - 88000000 - POP - Pop #str_p used to print string
+  65 - 98000000 - HLT
 
 log: |
   DEBUG   machine:simulation    TICK: 0, IP: 0, DR: 0, Z: 1, INSTR: None, SP: 2048, Stack: [], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 1, IP: 1, DR: 256, Z: 1, INSTR: JMP args[ADDRESS=256], SP: 2048, Stack: [], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 2, IP: 256, DR: 256, Z: 1, INSTR: JMP args[ADDRESS=256], SP: 2048, Stack: [], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 3, IP: 257, DR: 1, Z: 1, INSTR: LD args[REGISTER=0, IMMEDIATE=1], SP: 2048, Stack: [], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 4, IP: 257, DR: 1, Z: 1, INSTR: LD args[REGISTER=0, IMMEDIATE=1], SP: 2048, Stack: [], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 5, IP: 258, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2048, Stack: [], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 6, IP: 258, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [0], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 7, IP: 258, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 8, IP: 259, DR: 1, Z: 1, INSTR: LD args[REGISTER=0, IMMEDIATE=1], SP: 2047, Stack: [1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 9, IP: 259, DR: 1, Z: 1, INSTR: LD args[REGISTER=0, IMMEDIATE=1], SP: 2047, Stack: [1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 10, IP: 260, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 11, IP: 260, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2046, Stack: [0, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 12, IP: 260, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2046, Stack: [1, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 13, IP: 261, DR: 1, Z: 1, INSTR: LD args[REGISTER=0, STACK_OFFSET=1], SP: 2046, Stack: [1, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 14, IP: 261, DR: 2047, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=1], SP: 2046, Stack: [1, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 15, IP: 261, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=1], SP: 2046, Stack: [1, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 16, IP: 261, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=1], SP: 2046, Stack: [1, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 17, IP: 262, DR: 0, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2046, Stack: [1, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 18, IP: 262, DR: 2046, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2046, Stack: [1, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 19, IP: 262, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2046, Stack: [1, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 20, IP: 262, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2046, Stack: [1, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 21, IP: 263, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2046, Stack: [1, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 22, IP: 263, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2046, Stack: [1, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 23, IP: 263, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2046, Stack: [1, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 24, IP: 264, DR: 1, Z: 0, INSTR: POP, SP: 2046, Stack: [1, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 25, IP: 264, DR: 1, Z: 0, INSTR: POP, SP: 2047, Stack: [1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 26, IP: 265, DR: 271, Z: 0, INSTR: JZ args[REGISTER=0, ADDRESS=271], SP: 2047, Stack: [1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 27, IP: 265, DR: 271, Z: 0, INSTR: JZ args[REGISTER=0, ADDRESS=271], SP: 2047, Stack: [1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 28, IP: 266, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=1], SP: 2047, Stack: [1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 29, IP: 266, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=1], SP: 2047, Stack: [1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 30, IP: 267, DR: 2, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=2], SP: 2047, Stack: [1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 31, IP: 267, DR: 2, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=2], SP: 2047, Stack: [1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 32, IP: 268, DR: 84, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=84], SP: 2047, Stack: [1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 33, IP: 268, DR: 84, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=84], SP: 2047, Stack: [1], REGS: [84, 1]
-  DEBUG   machine:simulation    TICK: 34, IP: 269, DR: 3, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=3], SP: 2047, Stack: [1], REGS: [84, 1]
-  DEBUG   machine:simulation    TICK: 35, IP: 269, DR: 3, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=3], SP: 2047, Stack: [1], REGS: [84, 1]
-  DEBUG   machine:simulation    TICK: 36, IP: 270, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=2], SP: 2047, Stack: [1], REGS: [84, 1]
-  DEBUG   machine:simulation    TICK: 37, IP: 270, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=2], SP: 2047, Stack: [1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 38, IP: 271, DR: 276, Z: 0, INSTR: JMP args[ADDRESS=276], SP: 2047, Stack: [1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 39, IP: 276, DR: 276, Z: 0, INSTR: JMP args[ADDRESS=276], SP: 2047, Stack: [1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 40, IP: 277, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 41, IP: 277, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2046, Stack: [1, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 42, IP: 277, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2046, Stack: [2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 43, IP: 278, DR: 1, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=1], SP: 2046, Stack: [2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 44, IP: 278, DR: 1, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=1], SP: 2046, Stack: [2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 45, IP: 279, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2046, Stack: [2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 46, IP: 279, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2046, Stack: [2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 47, IP: 279, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2046, Stack: [2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 48, IP: 279, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2046, Stack: [2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 49, IP: 280, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2046, Stack: [2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 50, IP: 280, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2045, Stack: [0, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 51, IP: 280, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2045, Stack: [1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 52, IP: 281, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=0], SP: 2045, Stack: [1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 53, IP: 281, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=0], SP: 2045, Stack: [1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 54, IP: 282, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2045, Stack: [1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 55, IP: 282, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 56, IP: 282, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 57, IP: 283, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 58, IP: 283, DR: 2044, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 59, IP: 283, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 60, IP: 283, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 61, IP: 284, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 62, IP: 284, DR: 2045, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 63, IP: 284, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 64, IP: 284, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 65, IP: 285, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 66, IP: 285, DR: 0, Z: 1, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 67, IP: 285, DR: 0, Z: 1, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 68, IP: 286, DR: 297, Z: 1, INSTR: JNZ args[REGISTER=0, ADDRESS=297], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 69, IP: 286, DR: 297, Z: 1, INSTR: JNZ args[REGISTER=0, ADDRESS=297], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 70, IP: 287, DR: 2, Z: 1, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 71, IP: 287, DR: 2046, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 72, IP: 287, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
-  DEBUG   machine:simulation    TICK: 73, IP: 287, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 74, IP: 288, DR: 0, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 75, IP: 288, DR: 2044, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 76, IP: 288, DR: 0, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 77, IP: 288, DR: 0, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
-  DEBUG   machine:simulation    TICK: 78, IP: 289, DR: 0, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
-  DEBUG   machine:simulation    TICK: 79, IP: 289, DR: 2, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
-  DEBUG   machine:simulation    TICK: 80, IP: 289, DR: 2, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
-  DEBUG   machine:simulation    TICK: 81, IP: 290, DR: 2, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
-  DEBUG   machine:simulation    TICK: 82, IP: 290, DR: 3, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
-  DEBUG   machine:simulation    TICK: 83, IP: 290, DR: 3, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
-  DEBUG   machine:simulation    TICK: 84, IP: 291, DR: 1, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
-  DEBUG   machine:simulation    TICK: 85, IP: 291, DR: 1, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
-  DEBUG   machine:simulation    TICK: 86, IP: 292, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
-  DEBUG   machine:simulation    TICK: 87, IP: 292, DR: 3, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
-  DEBUG   machine:simulation    TICK: 88, IP: 292, DR: 84, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
-  DEBUG   machine:simulation    TICK: 89, IP: 292, DR: 84, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
-  DEBUG   machine:simulation    TICK: 90, IP: 293, DR: 1, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
-  DEBUG   machine:simulation    TICK: 91, IP: 293, DR: 1, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
-  DEBUG   machine:simulation    TICK: 92, IP: 294, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
-  DEBUG   machine:simulation    TICK: 93, IP: 294, DR: 2044, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
-  DEBUG   machine:simulation    TICK: 94, IP: 294, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
-  DEBUG   machine:simulation    TICK: 95, IP: 294, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 96, IP: 295, DR: 0, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 97, IP: 295, DR: 1, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 98, IP: 295, DR: 1, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 99, IP: 296, DR: 0, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 100, IP: 296, DR: 2044, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 101, IP: 296, DR: 2044, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 102, IP: 297, DR: 282, Z: 0, INSTR: JMP args[ADDRESS=282], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 103, IP: 282, DR: 282, Z: 0, INSTR: JMP args[ADDRESS=282], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 104, IP: 283, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 105, IP: 283, DR: 2044, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 106, IP: 283, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 107, IP: 283, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 108, IP: 284, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 109, IP: 284, DR: 2045, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 110, IP: 284, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
-  DEBUG   machine:simulation    TICK: 111, IP: 284, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 112, IP: 285, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 113, IP: 285, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 114, IP: 285, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 115, IP: 286, DR: 297, Z: 0, INSTR: JNZ args[REGISTER=0, ADDRESS=297], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 116, IP: 297, DR: 297, Z: 0, INSTR: JNZ args[REGISTER=0, ADDRESS=297], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 117, IP: 298, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 118, IP: 298, DR: 2046, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 119, IP: 298, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
-  DEBUG   machine:simulation    TICK: 120, IP: 298, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [1, 1, 2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 121, IP: 299, DR: 2, Z: 0, INSTR: POP, SP: 2044, Stack: [1, 1, 2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 122, IP: 299, DR: 2, Z: 0, INSTR: POP, SP: 2045, Stack: [1, 2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 123, IP: 300, DR: 2, Z: 0, INSTR: POP, SP: 2045, Stack: [1, 2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 124, IP: 300, DR: 2, Z: 0, INSTR: POP, SP: 2046, Stack: [2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 125, IP: 301, DR: 2, Z: 0, INSTR: POP, SP: 2046, Stack: [2, 1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 126, IP: 301, DR: 2, Z: 0, INSTR: POP, SP: 2047, Stack: [1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 127, IP: 302, DR: 2, Z: 0, INSTR: HLT, SP: 2047, Stack: [1], REGS: [2, 1]
-  DEBUG   machine:simulation    TICK: 128, IP: 302, DR: 2, Z: 0, INSTR: HLT, SP: 2047, Stack: [1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 1, IP: 1, DR: 64, Z: 1, INSTR: JMP args[ADDRESS=64], SP: 2048, Stack: [], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 2, IP: 64, DR: 64, Z: 1, INSTR: JMP args[ADDRESS=64], SP: 2048, Stack: [], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 3, IP: 65, DR: 1, Z: 1, INSTR: LD args[REGISTER=0, IMMEDIATE=1], SP: 2048, Stack: [], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 4, IP: 65, DR: 1, Z: 1, INSTR: LD args[REGISTER=0, IMMEDIATE=1], SP: 2048, Stack: [], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 5, IP: 66, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2048, Stack: [], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 6, IP: 66, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [0], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 7, IP: 66, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 8, IP: 67, DR: 1, Z: 1, INSTR: LD args[REGISTER=0, IMMEDIATE=1], SP: 2047, Stack: [1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 9, IP: 67, DR: 1, Z: 1, INSTR: LD args[REGISTER=0, IMMEDIATE=1], SP: 2047, Stack: [1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 10, IP: 68, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 11, IP: 68, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2046, Stack: [0, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 12, IP: 68, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2046, Stack: [1, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 13, IP: 69, DR: 1, Z: 1, INSTR: LD args[REGISTER=0, STACK_OFFSET=1], SP: 2046, Stack: [1, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 14, IP: 69, DR: 2047, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=1], SP: 2046, Stack: [1, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 15, IP: 69, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=1], SP: 2046, Stack: [1, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 16, IP: 69, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=1], SP: 2046, Stack: [1, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 17, IP: 70, DR: 0, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2046, Stack: [1, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 18, IP: 70, DR: 2046, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2046, Stack: [1, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 19, IP: 70, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2046, Stack: [1, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 20, IP: 70, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2046, Stack: [1, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 21, IP: 71, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2046, Stack: [1, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 22, IP: 71, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2046, Stack: [1, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 23, IP: 71, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2046, Stack: [1, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 24, IP: 72, DR: 1, Z: 0, INSTR: POP, SP: 2046, Stack: [1, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 25, IP: 72, DR: 1, Z: 0, INSTR: POP, SP: 2047, Stack: [1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 26, IP: 73, DR: 75, Z: 0, INSTR: JZ args[REGISTER=0, ADDRESS=75], SP: 2047, Stack: [1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 27, IP: 73, DR: 75, Z: 0, INSTR: JZ args[REGISTER=0, ADDRESS=75], SP: 2047, Stack: [1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 28, IP: 74, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=2], SP: 2047, Stack: [1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 29, IP: 74, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=2], SP: 2047, Stack: [1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 30, IP: 75, DR: 76, Z: 0, INSTR: JMP args[ADDRESS=76], SP: 2047, Stack: [1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 31, IP: 76, DR: 76, Z: 0, INSTR: JMP args[ADDRESS=76], SP: 2047, Stack: [1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 32, IP: 77, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 33, IP: 77, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2046, Stack: [1, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 34, IP: 77, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2046, Stack: [2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 35, IP: 78, DR: 1, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=1], SP: 2046, Stack: [2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 36, IP: 78, DR: 1, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=1], SP: 2046, Stack: [2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 37, IP: 79, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2046, Stack: [2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 38, IP: 79, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2046, Stack: [2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 39, IP: 79, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2046, Stack: [2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 40, IP: 79, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2046, Stack: [2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 41, IP: 80, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2046, Stack: [2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 42, IP: 80, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2045, Stack: [0, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 43, IP: 80, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2045, Stack: [1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 44, IP: 81, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=0], SP: 2045, Stack: [1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 45, IP: 81, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, IMMEDIATE=0], SP: 2045, Stack: [1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 46, IP: 82, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2045, Stack: [1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 47, IP: 82, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 48, IP: 82, DR: 0, Z: 0, INSTR: PUSH args[ADDRESS=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 49, IP: 83, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 50, IP: 83, DR: 2044, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 51, IP: 83, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 52, IP: 83, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 53, IP: 84, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 54, IP: 84, DR: 2045, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 55, IP: 84, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 56, IP: 84, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 57, IP: 85, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 58, IP: 85, DR: 0, Z: 1, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 59, IP: 85, DR: 0, Z: 1, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 60, IP: 86, DR: 97, Z: 1, INSTR: JNZ args[REGISTER=0, ADDRESS=97], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 61, IP: 86, DR: 97, Z: 1, INSTR: JNZ args[REGISTER=0, ADDRESS=97], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 62, IP: 87, DR: 2, Z: 1, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 63, IP: 87, DR: 2046, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 64, IP: 87, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 1]
+  DEBUG   machine:simulation    TICK: 65, IP: 87, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 66, IP: 88, DR: 0, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 67, IP: 88, DR: 2044, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 68, IP: 88, DR: 0, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 69, IP: 88, DR: 0, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
+  DEBUG   machine:simulation    TICK: 70, IP: 89, DR: 0, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
+  DEBUG   machine:simulation    TICK: 71, IP: 89, DR: 2, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
+  DEBUG   machine:simulation    TICK: 72, IP: 89, DR: 2, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
+  DEBUG   machine:simulation    TICK: 73, IP: 90, DR: 2, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
+  DEBUG   machine:simulation    TICK: 74, IP: 90, DR: 3, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [2, 0]
+  DEBUG   machine:simulation    TICK: 75, IP: 90, DR: 3, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
+  DEBUG   machine:simulation    TICK: 76, IP: 91, DR: 1, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
+  DEBUG   machine:simulation    TICK: 77, IP: 91, DR: 1, Z: 0, INSTR: ST args[REGISTER=0, ADDRESS=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
+  DEBUG   machine:simulation    TICK: 78, IP: 92, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
+  DEBUG   machine:simulation    TICK: 79, IP: 92, DR: 3, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
+  DEBUG   machine:simulation    TICK: 80, IP: 92, DR: 84, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [3, 0]
+  DEBUG   machine:simulation    TICK: 81, IP: 92, DR: 84, Z: 0, INSTR: LD args[REGISTER=0, INDIRECT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
+  DEBUG   machine:simulation    TICK: 82, IP: 93, DR: 1, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
+  DEBUG   machine:simulation    TICK: 83, IP: 93, DR: 1, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
+  DEBUG   machine:simulation    TICK: 84, IP: 94, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
+  DEBUG   machine:simulation    TICK: 85, IP: 94, DR: 2044, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
+  DEBUG   machine:simulation    TICK: 86, IP: 94, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [84, 0]
+  DEBUG   machine:simulation    TICK: 87, IP: 94, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 88, IP: 95, DR: 0, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 89, IP: 95, DR: 1, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 90, IP: 95, DR: 1, Z: 0, INSTR: ADD args[REGISTER=0, REGISTER=0, IMMEDIATE=1], SP: 2044, Stack: [0, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 91, IP: 96, DR: 0, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 92, IP: 96, DR: 2044, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [0, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 93, IP: 96, DR: 2044, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 94, IP: 97, DR: 82, Z: 0, INSTR: JMP args[ADDRESS=82], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 95, IP: 82, DR: 82, Z: 0, INSTR: JMP args[ADDRESS=82], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 96, IP: 83, DR: 0, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 97, IP: 83, DR: 2044, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 98, IP: 83, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 99, IP: 83, DR: 1, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 100, IP: 84, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 101, IP: 84, DR: 2045, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 102, IP: 84, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 0]
+  DEBUG   machine:simulation    TICK: 103, IP: 84, DR: 1, Z: 0, INSTR: LD args[REGISTER=1, STACK_OFFSET=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 104, IP: 85, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 105, IP: 85, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 106, IP: 85, DR: 1, Z: 0, INSTR: EQ args[REGISTER=0, REGISTER=0, REGISTER=1], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 107, IP: 86, DR: 97, Z: 0, INSTR: JNZ args[REGISTER=0, ADDRESS=97], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 108, IP: 97, DR: 97, Z: 0, INSTR: JNZ args[REGISTER=0, ADDRESS=97], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 109, IP: 98, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 110, IP: 98, DR: 2046, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 111, IP: 98, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [1, 1, 2, 1], REGS: [1, 1]
+  DEBUG   machine:simulation    TICK: 112, IP: 98, DR: 2, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=2], SP: 2044, Stack: [1, 1, 2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 113, IP: 99, DR: 2, Z: 0, INSTR: POP, SP: 2044, Stack: [1, 1, 2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 114, IP: 99, DR: 2, Z: 0, INSTR: POP, SP: 2045, Stack: [1, 2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 115, IP: 100, DR: 2, Z: 0, INSTR: POP, SP: 2045, Stack: [1, 2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 116, IP: 100, DR: 2, Z: 0, INSTR: POP, SP: 2046, Stack: [2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 117, IP: 101, DR: 2, Z: 0, INSTR: POP, SP: 2046, Stack: [2, 1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 118, IP: 101, DR: 2, Z: 0, INSTR: POP, SP: 2047, Stack: [1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 119, IP: 102, DR: 2, Z: 0, INSTR: HLT, SP: 2047, Stack: [1], REGS: [2, 1]
+  DEBUG   machine:simulation    TICK: 120, IP: 102, DR: 2, Z: 0, INSTR: HLT, SP: 2047, Stack: [1], REGS: [2, 1]

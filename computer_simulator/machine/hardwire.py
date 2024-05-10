@@ -163,7 +163,10 @@ class DataPath:
         self.io = io
 
     def reg_read(self, sel_src_1: SrcSelSignal, sel_src_2: SrcSelSignal) -> tuple[int, int]:
-        return self.regs[sel_src_1.value], self.regs[sel_src_2.value]
+        return (
+            self.regs[sel_src_1.value] if sel_src_1.value < len(self.regs) else None,
+            self.regs[sel_src_2.value] if sel_src_2.value < len(self.regs) else None,
+        )
 
     def reg_write(
         self,
@@ -368,7 +371,6 @@ def handle_instruction_fetch_tick(control_unit: ControlUnit):
         result = control_unit.data_path.oe(AddrSelSignal.IP)
 
         if not isinstance(result, Instruction):
-            print(control_unit.data_path.ip)
             raise InvalidValueTypeFromMemoryError(result)
         control_unit.decoded_instruction = cast(Instruction, result)
 

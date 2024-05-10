@@ -15,15 +15,15 @@ class Opcode(Enum):
     MOD: int = 7
     DIV: int = 8
     MUL: int = 9
-    JZ: int = 10
-    JNZ: int = 11
-    JMP: int = 12
-    POP: int = 13
+    JMP: int = 10
+    CALL: int = 11
+    JZ: int = 12
+    JNZ: int = 13
     PUSH: int = 14
-    CALL: int = 15
-    RET: int = 16
-    IN: int = 17
-    OUT: int = 18
+    IN: int = 15
+    OUT: int = 16
+    POP: int = 17
+    RET: int = 18
     HLT: int = 19
 
     def __str__(self) -> str:
@@ -84,7 +84,7 @@ class Instruction:
 
     @property
     def mnemonic(self) -> str:
-        r = f"{self.opcode} "
+        r = f"{self.opcode}"
         if self.args:
-            r += ", ".join([arg.mnemonic for arg in self.args])
+            r += " " + ", ".join([arg.mnemonic for arg in self.args])
         return r

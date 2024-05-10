@@ -18,7 +18,6 @@ from computer_simulator.translator.tokenizer import Token
 
 DEFAULT_REGISTER = Arg(0, ArgType.REGISTER)
 
-
 BINOP_OPCODE: dict[str, Opcode] = {
     "+": Opcode.ADD,
     "-": Opcode.SUB,
@@ -81,22 +80,15 @@ class Program:
     def alloc_string(self, value: str) -> int:
         address = self.memory_used
         self.memory[self.memory_used] = len(value)
-        print(value, self.memory_used, self.memory[self.memory_used])
-        self.memory.append(Instruction(Opcode.LD, [DEFAULT_REGISTER, Arg(len(value), ArgType.IMMEDIATE)]))
-        self.memory.append(Instruction(Opcode.ST, [DEFAULT_REGISTER, Arg(self.memory_used, ArgType.ADDRESS)]))
         self.memory_used += 1
         for char in value:
             self.memory[self.memory_used] = ord(char)
-            self.memory.append(Instruction(Opcode.LD, [DEFAULT_REGISTER, Arg(ord(char), ArgType.IMMEDIATE)]))
-            self.memory.append(Instruction(Opcode.ST, [DEFAULT_REGISTER, Arg(self.memory_used, ArgType.ADDRESS)]))
             self.memory_used += 1
         return address
 
     def alloc_string_of_size(self, size: int) -> int:
         address = self.memory_used
         self.memory[self.memory_used] = size
-        self.memory.append(Instruction(Opcode.LD, [DEFAULT_REGISTER, Arg(size, ArgType.IMMEDIATE)]))
-        self.memory.append(Instruction(Opcode.ST, [DEFAULT_REGISTER, Arg(self.memory_used, ArgType.ADDRESS)]))
         self.memory_used += 1
         for _ in range(size):
             self.memory[self.memory_used] = 0
@@ -283,10 +275,14 @@ def handle_token_identifier(tokens: list[Token], idx: int, result: Program, star
             result.memory.append(Instruction(Opcode.POP, None, f"Pop arg {arg}"))
         return get_expr_end_idx(tokens, args_end_idx, started_with_open_bracket)
 
+    value = result.get_var_sp_offset(tokens[idx].value)
+    if value is None:
+        raise InvalidSymbolsError(got=tokens[idx].value, expected="known variable, but got unknown")
+
     result.memory.append(
         Instruction(
             Opcode.LD,
-            [DEFAULT_REGISTER, Arg(cast(int, result.get_var_sp_offset(tokens[idx].value)), ArgType.STACK_OFFSET)],
+            [DEFAULT_REGISTER, Arg(cast(int, value), ArgType.STACK_OFFSET)],
         )
     )
     return get_expr_end_idx(tokens, idx + 1, started_with_open_bracket)
@@ -443,7 +439,7 @@ def handle_token_read_string(tokens: list[Token], idx: int, result: Program, sta
 
     # if char is 0, then break
     result.memory.append(Instruction(Opcode.EQ, [DEFAULT_REGISTER, DEFAULT_REGISTER, Arg(0, ArgType.IMMEDIATE)]))
-    jz_idx = len(result.memory)
+    jz_idx_1 = len(result.memory)
     result.memory.append(Instruction(Opcode.JNZ, None))
 
     # save char by index
@@ -470,11 +466,22 @@ def handle_token_read_string(tokens: list[Token], idx: int, result: Program, sta
         Instruction(Opcode.ST, [DEFAULT_REGISTER, Arg(SERVICE_VAR_ADDR, ArgType.INDIRECT)], "Save char by index")
     )
 
+    # if string is longer than STRING_ALLOC_SIZE, then break
+    result.memory.append(
+        Instruction(Opcode.LD, [DEFAULT_REGISTER, Arg(cast(int, result.get_var_sp_offset("#i")), ArgType.STACK_OFFSET)])
+    )
+    result.memory.append(
+        Instruction(Opcode.EQ, [DEFAULT_REGISTER, DEFAULT_REGISTER, Arg(STRING_ALLOC_SIZE + 1, ArgType.IMMEDIATE)])
+    )
+    jz_idx_2 = len(result.memory)
+    result.memory.append(Instruction(Opcode.JNZ, None))
+
     increment_index(result)
 
     # jump to cycle start
     result.memory.append(Instruction(Opcode.JMP, [Arg(cycle_start_idx, ArgType.ADDRESS)]))
-    cast(Instruction, result.memory[jz_idx]).args = [DEFAULT_REGISTER, Arg(len(result.memory), ArgType.ADDRESS)]
+    cast(Instruction, result.memory[jz_idx_1]).args = [DEFAULT_REGISTER, Arg(len(result.memory), ArgType.ADDRESS)]
+    cast(Instruction, result.memory[jz_idx_2]).args = [DEFAULT_REGISTER, Arg(len(result.memory), ArgType.ADDRESS)]
 
     # save string size
     result.memory.append(
@@ -551,14 +558,18 @@ def handle_token_defun(tokens: list[Token], idx: int, result: Program, started_w
         result.memory.append(
             Instruction(Opcode.POP, [DEFAULT_REGISTER], f"Pop local var of function {tokens[idx + 1].value}")
         )
-    result.current_block_setq_count = outer_setq_count
-
     result.memory.append(Instruction(Opcode.RET, None))
 
     cast(Instruction, result.memory[jmp_idx]).args = [Arg(len(result.memory), ArgType.ADDRESS)]
 
+    for _ in range(result.current_block_setq_count):
+        result.current_stack.pop()
+
     for var in stack_variables:
         result.unresolve_stack_var(var)
+    result.unresolve_stack_var("#ret_addr")
+
+    result.current_block_setq_count = outer_setq_count
 
     result.memory.append(
         Instruction(
