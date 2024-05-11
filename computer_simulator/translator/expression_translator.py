@@ -314,7 +314,6 @@ def handle_token_print_string(tokens: list[Token], idx: int, result: Program, st
     result.push_var_to_stack(str_pointer_varname)
 
     # save string size:
-    # load string size to ac
     result.memory.append(Instruction(Opcode.ST, [DEFAULT_REGISTER, Arg(SERVICE_VAR_ADDR, ArgType.ADDRESS)]))
     result.memory.append(
         Instruction(

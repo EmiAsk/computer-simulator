@@ -44,13 +44,6 @@ class AddrSelSignal(Enum):
     DR = 3
 
 
-class AcSelSignal(Enum):
-    IN = 0
-    ALU = 1
-    DR = 2
-    IP = 3
-
-
 class DrSelSignal(Enum):
     MEMORY = 1
     ALU = 2
@@ -68,7 +61,6 @@ class AluOp(Enum):
 
 
 class AluLeft(Enum):
-    AC = 0
     IP = 1
     SP = 2
     SRC1 = 3
