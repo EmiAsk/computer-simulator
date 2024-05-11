@@ -157,8 +157,6 @@ class DataPath:
         self.ip: int = 0  # instruction pointer
         self.dr: int = 0  # data register
         self.sp: int = len(self.memory)  # stack pointer
-        self.ar: int = 0  # address register
-        self.ac: int = 0  # accumulator
         self.regs: list[int] = [0] * REG_NUMBER
         self.io = io
 
@@ -271,10 +269,10 @@ class DataPath:
 
         raise UnknownSignalError(addr_sel_signal)
 
-    def wr(self, addr_sel_signal: AddrSelSignal, src_1: int) -> None:
+    def write(self, addr_sel_signal: AddrSelSignal, src_1: int) -> None:
         self.memory[self._get_reg_by_addr_sel_signal(addr_sel_signal)] = src_1
 
-    def oe(self, addr_sel_signal: AddrSelSignal) -> Instruction | int:
+    def read(self, addr_sel_signal: AddrSelSignal) -> Instruction | int:
         return self.memory[self._get_reg_by_addr_sel_signal(addr_sel_signal)]
 
 
@@ -341,15 +339,7 @@ def _need_address_fetch(instruction: Instruction) -> bool:
     )
 
 
-NO_FETCH_OPERAND_INSTR = [
-    Opcode.JMP,
-    Opcode.JZ,
-    Opcode.JNZ,
-    Opcode.ST,
-    Opcode.PUSH,
-    Opcode.POP,
-    Opcode.CALL,
-]
+FETCH_INSTR_ARG = [Opcode.JMP, Opcode.JZ, Opcode.JNZ, Opcode.LD, Opcode.ST, Opcode.CALL]
 
 
 def _need_operand_fetch(instruction: Instruction) -> bool:
@@ -368,7 +358,7 @@ def find_next_stage_from_instruction_fetch(control_unit, decoded_instruction):
 def handle_instruction_fetch_tick(control_unit: ControlUnit):
     if control_unit.tc == 0:
         control_unit.executed_instruction_n += 1
-        result = control_unit.data_path.oe(AddrSelSignal.IP)
+        result = control_unit.data_path.read(AddrSelSignal.IP)
 
         if not isinstance(result, Instruction):
             raise InvalidValueTypeFromMemoryError(result)
@@ -378,7 +368,7 @@ def handle_instruction_fetch_tick(control_unit: ControlUnit):
             raise InvalidValueTypeFromMemoryError(control_unit.decoded_instruction)
         decoded_instruction: Instruction = cast(Instruction, control_unit.decoded_instruction)
 
-        if decoded_instruction.args and len(decoded_instruction.args) not in (0, 3):
+        if decoded_instruction.opcode in FETCH_INSTR_ARG:
             arg: Arg = cast(Arg, decoded_instruction.args[-1])
             control_unit.data_path.latch_dr(DrSelSignal.MEMORY, mem_value=arg.value)
 
@@ -414,7 +404,7 @@ def handle_address_fetch_tick(control_unit: ControlUnit):
 
         find_next_stage_after_address_fetch(control_unit, decoded_instruction)
     elif arg.arg_type == ArgType.INDIRECT:
-        value = data_path.oe(AddrSelSignal.DR)
+        value = data_path.read(AddrSelSignal.DR)
         if not isinstance(value, int):
             raise InvalidValueTypeFromMemoryError(value)
 
@@ -432,7 +422,7 @@ def handle_address_fetch_tick(control_unit: ControlUnit):
 
 
 def handle_operand_fetch_tick(control_unit: ControlUnit):
-    value = control_unit.data_path.oe(AddrSelSignal.DR)
+    value = control_unit.data_path.read(AddrSelSignal.DR)
     if not isinstance(value, int):
         raise InvalidValueTypeFromMemoryError(value)
 
@@ -451,7 +441,7 @@ def command_handle_execute_st(control_unit: ControlUnit):
     reg_number = control_unit.decoded_instruction.args[0].value
     src_1, _ = control_unit.data_path.reg_read(SrcSelSignal(reg_number), SrcSelSignal(reg_number))
 
-    control_unit.data_path.wr(AddrSelSignal.DR, src_1)
+    control_unit.data_path.write(AddrSelSignal.DR, src_1)
     control_unit.stage = Stage.INSTRUCTION_FETCH
 
 
@@ -513,7 +503,7 @@ def command_handle_execute_push(control_unit: ControlUnit):
     elif control_unit.tc == 1:
         sel_src_1 = SrcSelSignal(instruction.args[0].value)
         src_1, _ = control_unit.data_path.reg_read(sel_src_1, sel_src_1)
-        control_unit.data_path.wr(AddrSelSignal.SP, src_1)
+        control_unit.data_path.write(AddrSelSignal.SP, src_1)
 
         control_unit.latch_tc_zero()
         control_unit.stage = Stage.INSTRUCTION_FETCH
@@ -557,7 +547,7 @@ def command_handle_execute_call(control_unit: ControlUnit):
         control_unit.latch_tc_inc()
     elif control_unit.tc == 1:
         src_1, _ = control_unit.data_path.reg_read(SrcSelSignal(DEFAULT_REGISTER), SrcSelSignal(DEFAULT_REGISTER))
-        control_unit.data_path.wr(AddrSelSignal.SP, src_1)
+        control_unit.data_path.write(AddrSelSignal.SP, src_1)
         control_unit.data_path.latch_ip(IpSelSignal.DR)
 
         control_unit.latch_tc_zero()
@@ -568,7 +558,7 @@ def command_handle_execute_call(control_unit: ControlUnit):
 
 def command_handle_execute_ret(control_unit: ControlUnit):
     if control_unit.tc == 0:
-        ret_addr = control_unit.data_path.oe(AddrSelSignal.SP)
+        ret_addr = control_unit.data_path.read(AddrSelSignal.SP)
         if not isinstance(ret_addr, int):
             raise InvalidValueTypeFromMemoryError(ret_addr)
 

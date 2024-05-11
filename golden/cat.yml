@@ -5,8 +5,16 @@ source: |-
       (progn
         (print_char a)
         (read_char a))))
+
 input: |-
   foo
+
+output: |
+  source LoC: 6 code instr: 17
+  ============================================================
+  foo
+  instructions_n: 48 ticks: 131
+
 code: |-
   50000040
   00000000
@@ -88,12 +96,6 @@ code: |-
   08800000
   50000043
   98000000
-
-output: |
-  source LoC: 6 code instr: 17
-  ============================================================
-  foo
-  instructions_n: 48 ticks: 131
 
 disasm: |-
   0 - 50000040 - JMP mem[0x40] - Skip static memory
@@ -177,17 +179,16 @@ disasm: |-
   4e - 50000043 - JMP mem[0x43]
   4f - 98000000 - HLT
 
-
 log: |
   DEBUG   machine:simulation    TICK: 0, IP: 0, DR: 0, Z: 1, INSTR: None, SP: 2048, Stack: [], REGS: [0, 0]
   DEBUG   machine:simulation    TICK: 1, IP: 1, DR: 64, Z: 1, INSTR: JMP args[ADDRESS=64], SP: 2048, Stack: [], REGS: [0, 0]
   DEBUG   machine:simulation    TICK: 2, IP: 64, DR: 64, Z: 1, INSTR: JMP args[ADDRESS=64], SP: 2048, Stack: [], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 3, IP: 65, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2048, Stack: [], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 4, IP: 65, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [0], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 5, IP: 65, DR: 0, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [0], REGS: [0, 0]
-  DEBUG   machine:simulation    TICK: 6, IP: 66, DR: 0, Z: 1, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [0], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 3, IP: 65, DR: 64, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2048, Stack: [], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 4, IP: 65, DR: 64, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [0], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 5, IP: 65, DR: 64, Z: 1, INSTR: PUSH args[ADDRESS=0], SP: 2047, Stack: [0], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 6, IP: 66, DR: 64, Z: 1, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [0], REGS: [0, 0]
   DEBUG   hardwire:read          IN: 102 - "f"
-  DEBUG   machine:simulation    TICK: 7, IP: 66, DR: 0, Z: 1, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [0], REGS: [102, 0]
+  DEBUG   machine:simulation    TICK: 7, IP: 66, DR: 64, Z: 1, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [0], REGS: [102, 0]
   DEBUG   machine:simulation    TICK: 8, IP: 67, DR: 0, Z: 1, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [0], REGS: [102, 0]
   DEBUG   machine:simulation    TICK: 9, IP: 67, DR: 2047, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [0], REGS: [102, 0]
   DEBUG   machine:simulation    TICK: 10, IP: 67, DR: 2047, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [102], REGS: [102, 0]
@@ -215,11 +216,11 @@ log: |
   DEBUG   machine:simulation    TICK: 32, IP: 75, DR: 2047, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [102], REGS: [1, 0]
   DEBUG   machine:simulation    TICK: 33, IP: 75, DR: 102, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [102], REGS: [1, 0]
   DEBUG   machine:simulation    TICK: 34, IP: 75, DR: 102, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [102], REGS: [102, 0]
-  DEBUG   machine:simulation    TICK: 35, IP: 76, DR: 1, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [102], REGS: [102, 0]
-  DEBUG   machine:simulation    TICK: 36, IP: 76, DR: 1, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [102], REGS: [102, 0]
-  DEBUG   machine:simulation    TICK: 37, IP: 77, DR: 0, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [102], REGS: [102, 0]
+  DEBUG   machine:simulation    TICK: 35, IP: 76, DR: 102, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [102], REGS: [102, 0]
+  DEBUG   machine:simulation    TICK: 36, IP: 76, DR: 102, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [102], REGS: [102, 0]
+  DEBUG   machine:simulation    TICK: 37, IP: 77, DR: 102, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [102], REGS: [102, 0]
   DEBUG   hardwire:read          IN: 111 - "o"
-  DEBUG   machine:simulation    TICK: 38, IP: 77, DR: 0, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [102], REGS: [111, 0]
+  DEBUG   machine:simulation    TICK: 38, IP: 77, DR: 102, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [102], REGS: [111, 0]
   DEBUG   machine:simulation    TICK: 39, IP: 78, DR: 0, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [102], REGS: [111, 0]
   DEBUG   machine:simulation    TICK: 40, IP: 78, DR: 2047, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [102], REGS: [111, 0]
   DEBUG   machine:simulation    TICK: 41, IP: 78, DR: 2047, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [111, 0]
@@ -249,11 +250,11 @@ log: |
   DEBUG   machine:simulation    TICK: 65, IP: 75, DR: 2047, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [1, 0]
   DEBUG   machine:simulation    TICK: 66, IP: 75, DR: 111, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [1, 0]
   DEBUG   machine:simulation    TICK: 67, IP: 75, DR: 111, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [111, 0]
-  DEBUG   machine:simulation    TICK: 68, IP: 76, DR: 1, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [111], REGS: [111, 0]
-  DEBUG   machine:simulation    TICK: 69, IP: 76, DR: 1, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [111], REGS: [111, 0]
-  DEBUG   machine:simulation    TICK: 70, IP: 77, DR: 0, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [111], REGS: [111, 0]
+  DEBUG   machine:simulation    TICK: 68, IP: 76, DR: 111, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [111], REGS: [111, 0]
+  DEBUG   machine:simulation    TICK: 69, IP: 76, DR: 111, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [111], REGS: [111, 0]
+  DEBUG   machine:simulation    TICK: 70, IP: 77, DR: 111, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [111], REGS: [111, 0]
   DEBUG   hardwire:read          IN: 111 - "o"
-  DEBUG   machine:simulation    TICK: 71, IP: 77, DR: 0, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [111], REGS: [111, 0]
+  DEBUG   machine:simulation    TICK: 71, IP: 77, DR: 111, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [111], REGS: [111, 0]
   DEBUG   machine:simulation    TICK: 72, IP: 78, DR: 0, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [111, 0]
   DEBUG   machine:simulation    TICK: 73, IP: 78, DR: 2047, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [111, 0]
   DEBUG   machine:simulation    TICK: 74, IP: 78, DR: 2047, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [111, 0]
@@ -283,11 +284,11 @@ log: |
   DEBUG   machine:simulation    TICK: 98, IP: 75, DR: 2047, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [1, 0]
   DEBUG   machine:simulation    TICK: 99, IP: 75, DR: 111, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [1, 0]
   DEBUG   machine:simulation    TICK: 100, IP: 75, DR: 111, Z: 0, INSTR: LD args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [111, 0]
-  DEBUG   machine:simulation    TICK: 101, IP: 76, DR: 1, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [111], REGS: [111, 0]
-  DEBUG   machine:simulation    TICK: 102, IP: 76, DR: 1, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [111], REGS: [111, 0]
-  DEBUG   machine:simulation    TICK: 103, IP: 77, DR: 0, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [111], REGS: [111, 0]
+  DEBUG   machine:simulation    TICK: 101, IP: 76, DR: 111, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [111], REGS: [111, 0]
+  DEBUG   machine:simulation    TICK: 102, IP: 76, DR: 111, Z: 0, INSTR: OUT args[REGISTER=0, PORT=1], SP: 2047, Stack: [111], REGS: [111, 0]
+  DEBUG   machine:simulation    TICK: 103, IP: 77, DR: 111, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [111], REGS: [111, 0]
   DEBUG   hardwire:read          IN: 0
-  DEBUG   machine:simulation    TICK: 104, IP: 77, DR: 0, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [111], REGS: [0, 0]
+  DEBUG   machine:simulation    TICK: 104, IP: 77, DR: 111, Z: 0, INSTR: IN args[REGISTER=0, PORT=0], SP: 2047, Stack: [111], REGS: [0, 0]
   DEBUG   machine:simulation    TICK: 105, IP: 78, DR: 0, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [0, 0]
   DEBUG   machine:simulation    TICK: 106, IP: 78, DR: 2047, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [111], REGS: [0, 0]
   DEBUG   machine:simulation    TICK: 107, IP: 78, DR: 2047, Z: 0, INSTR: ST args[REGISTER=0, STACK_OFFSET=0], SP: 2047, Stack: [0], REGS: [0, 0]
